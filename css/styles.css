@@ -1,2 +1,7 @@
 @import "reset.css";
 @import "wordrelay.css";
+@import "guguDan.css";
+
+.js__webgame {
+  display: flex;
+}
