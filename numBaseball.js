@@ -22,11 +22,11 @@ numBallInput.type = "text";
 numBallInput.maxLength = 4;
 numBallBtn.textContent = "입력!";
 
-const failNum = 0;
+let failNum = 0;
 
 const runBaseBall = (e) => {
   e.preventDefault();
-  let answer = numBallInput.nodeValue;
+  let answer = numBallInput.value;
   if (answer === numArray.join("")) {
     numBallResult.textContent = "홈런!";
     numBallInput.value = "";
@@ -49,14 +49,12 @@ const runBaseBall = (e) => {
       console.log("답이 틀리면", answerArray);
       for (let i = 0; i < 3; i += 1) {
         if (Number(answerArray[i]) === numArray[i]) {
-          console.log("같은 자리?");
           strike += 1;
         } else if (numArray.indexOf(Number(answerArray[i])) > -1) {
-          console.log("겹치는 숫자?");
           ball += 1;
         }
       }
-      numBallResult.textContent = strike + "스트라이크" + 볼 + "볼입니다.";
+      numBallResult.textContent = strike + "스트라이크" + ball + "볼입니다.";
       numBallInput.value = "";
       numBallInput.focus();
     }

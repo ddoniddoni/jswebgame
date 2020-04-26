@@ -1,0 +1,39 @@
+.js__webgame-numbaseball {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  width: 300px;
+  height: 200px;
+}
+
+.numBall__input {
+  background-color: #ffffff;
+  border: 0px;
+  width: 100px;
+  height: 20px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.numBall__btn {
+  background-color: #ffffff;
+  border: 0px;
+  border-radius: 20px;
+  font-size: 15px;
+  width: 50px;
+  height: 20px;
+  color: #000000;
+  cursor: pointer;
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.numBall__result {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
