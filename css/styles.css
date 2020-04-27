@@ -6,3 +6,8 @@
 .js__webgame {
   display: flex;
 }
+
+.webgame-name {
+  font-size: 20px;
+  color: #ffffff;
+}

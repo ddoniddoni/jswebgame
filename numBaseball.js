@@ -1,5 +1,6 @@
-const numBallResult = document.querySelector(".numBall__result");
+const numBallText = document.querySelector(".numBall__text");
 const numBallForm = document.querySelector(".numBall__form");
+const numBallResult = document.querySelector(".numBall__result");
 const numBallInput = document.querySelector(".numBall__input");
 const numBallBtn = document.querySelector(".numBall__btn");
 
@@ -16,11 +17,10 @@ const numRandom = () => {
 };
 
 numRandom();
-console.log(numArray);
 
 numBallInput.type = "text";
 numBallInput.maxLength = 4;
-numBallBtn.textContent = "입력!";
+numBallBtn.textContent = "입력";
 
 let failNum = 0;
 
@@ -39,14 +39,12 @@ const runBaseBall = (e) => {
     let ball = 0;
     failNum += 1;
     if (failNum > 10) {
-      numBallResult.textContent =
-        "10번 넘게 틀려서 실패! 답은" + numArray.join(",") + "였습니다!";
+      numBallResult.textContent = "10번 넘게 틀려서 실패! 답은" + numArray.join(",") + "였습니다!";
       numBallInput.value = "";
       numBallInput.focus();
       numRandom();
       failNum = 0;
     } else {
-      console.log("답이 틀리면", answerArray);
       for (let i = 0; i < 3; i += 1) {
         if (Number(answerArray[i]) === numArray[i]) {
           strike += 1;
@@ -54,7 +52,7 @@ const runBaseBall = (e) => {
           ball += 1;
         }
       }
-      numBallResult.textContent = strike + "스트라이크" + ball + "볼입니다.";
+      numBallText.textContent = strike + " 스트라이크 " + ball + " 볼입니다.";
       numBallInput.value = "";
       numBallInput.focus();
     }
