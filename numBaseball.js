@@ -39,7 +39,7 @@ const runBaseBall = (e) => {
     let ball = 0;
     failNum += 1;
     if (failNum > 10) {
-      numBallResult.textContent = "10번 넘게 틀려서 실패! 답은" + numArray.join(",") + "였습니다!";
+      numBallText.textContent = "10번 넘게 틀려서 실패! 답은" + numArray.join(",") + "였습니다!";
       numBallInput.value = "";
       numBallInput.focus();
       numRandom();

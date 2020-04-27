@@ -2,9 +2,9 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  background-color: #000000;
+  background-color: #456789;
   width: 300px;
-  height: 200px;
+  height: 300px;
   border: 1px solid #ffffff;
 }
 
@@ -33,7 +33,7 @@
 
 .numBall__text,
 .numBall__result {
-  display: flex;
+  display: block;
   justify-content: center;
   font-size: 15px;
   font-weight: 600;
