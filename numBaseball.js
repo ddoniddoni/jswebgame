@@ -1,9 +1,8 @@
 const numBallText = document.querySelector(".numBall__text");
 const numBallForm = document.querySelector(".numBall__form");
-const numBallResult = document.querySelector(".numBall__result");
 const numBallInput = document.querySelector(".numBall__input");
 const numBallBtn = document.querySelector(".numBall__btn");
-
+const numBallResult = document.querySelector(".numBall__result");
 let numExample;
 let numArray;
 
@@ -17,10 +16,10 @@ const numRandom = () => {
 };
 
 numRandom();
-
 numBallInput.type = "text";
 numBallInput.maxLength = 4;
 numBallBtn.textContent = "입력";
+numBallText.textContent = "4자리 숫자를 입력";
 
 let failNum = 0;
 
@@ -38,8 +37,9 @@ const runBaseBall = (e) => {
     let strike = 0;
     let ball = 0;
     failNum += 1;
-    if (failNum > 10) {
-      numBallText.textContent = "10번 넘게 틀려서 실패! 답은" + numArray.join(",") + "였습니다!";
+    numBallResult.textContent = `${10 - failNum}` + "번 남았습니다.";
+    if (failNum > 9) {
+      numBallResult.textContent = "10번 넘게 틀려서 실패! 답은" + numArray.join(",") + "였습니다!";
       numBallInput.value = "";
       numBallInput.focus();
       numRandom();
