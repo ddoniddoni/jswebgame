@@ -1,0 +1,43 @@
+.js__webgame-response {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: #456789;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #ffffff;
+}
+
+#response__screen {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#response__screen.waiting {
+  background-color: aqua;
+}
+#response__screen.ready {
+  background-color: red;
+  color: white;
+}
+
+#response__screen.now {
+  background-color: greenyellow;
+}
+
+.response__result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 18px;
+}

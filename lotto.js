@@ -36,14 +36,34 @@ const fillBall = (num, lotto) => {
   lottoBall.style.background = backColor;
 };
 
+const fillBonusBall = (num, lotto) => {
+  lottoBonus.textContent = num;
+  let backColor;
+  if (num <= 10) {
+    backColor = "red";
+  } else if (num <= 20) {
+    backColor = "orange";
+  } else if (num <= 30) {
+    backColor = "yellow";
+  } else if (num <= 40) {
+    backColor = "blue";
+  } else {
+    backColor = "green";
+  }
+  lottoBonus.style.background = backColor;
+};
+
 for (let i = 0; i < winningBall.length; i++) {
-  (function closer(j) {
+  (closer = (j) => {
     setTimeout(() => {
       fillBall(winningBall[j], lottoResult);
     }, (j + 1) * 1000);
   })(i);
 }
 
-setTimeout(function callback() {
-  fillBall(bonusBall, lottoBonus);
-}, 7000);
+setTimeout(
+  (callback = () => {
+    fillBonusBall(bonusBall, lottoBonus);
+  }),
+  7000
+);

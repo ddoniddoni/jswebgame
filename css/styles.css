@@ -3,6 +3,7 @@
 @import "guguDan.css";
 @import "baseball.css";
 @import "lotto.css";
+@import "response.css";
 
 .js__webgame {
   display: flex;
